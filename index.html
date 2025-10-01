@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOTIONgenerator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>MOTION<em>generator</em></h1>
+  <div class="container">
+    <input type="file" id="imageUpload" multiple accept="image/*" />
+    <label for="frameTime">Tempo por frame (ms):</label>
+    <input type="number" id="frameTime" value="500" min="50" />
+    <button id="generateBtn">Gerar Vídeo</button>
+    <br><br>
+    <canvas id="previewCanvas" width="368" height="276"></canvas>
+
+    <h2><em>glitch generator</em></h2>
+    <label><input type="checkbox" id="enableGlitch" /> Ativar glitch</label>
+
+    <div id="glitchControls">
+      <label>Shift (px): <input type="range" id="glitchShift" min="0" max="30" value="0"><span id="valShift"></span></label><br>
+      <label>RGB Split: <input type="range" id="glitchRGB" min="0" max="20" value="0"><span id="valRGB"></span></label><br>
+      <label>Noise: <input type="range" id="glitchNoise" min="0" max="100" value="0"><span id="valNoise"></span></label><br>
+      <label>Blocks: <input type="range" id="glitchBlocks" min="0" max="10" value="0"><span id="valBlocks"></span></label><br>
+      <label>Wave: <input type="range" id="glitchWave" min="0" max="20" value="0"><span id="valWave"></span></label><br>
+      <label>Scanlines: <input type="range" id="glitchScan" min="0" max="255" value="0"><span id="valScan"></span></label><br>
+      <label>Brilho: <input type="range" id="glitchBrightness" min="-100" max="100" value="0"><span id="valBrightness"></span></label><br>
+      <label>Saturação: <input type="range" id="glitchSaturation" min="0" max="300" value="100"><span id="valSaturation"></span>%</label><br>
+    </div>
+
+    <a id="downloadLink" style="display:none;">Download</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
