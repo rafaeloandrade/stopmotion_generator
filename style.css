@@ -1,0 +1,29 @@
+body {
+  background: #111;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.italic {
+  font-style: italic;
+}
+canvas {
+  background: black;
+  margin-top: 10px;
+  border: 1px solid #444;
+  max-width: 100%;
+}
+label, input, select {
+  display: block;
+  margin: 8px auto;
+}
+#glitchControls {
+  margin-top: 10px;
+}

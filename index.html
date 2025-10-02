@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOTIONgenerator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MOTION<span class="italic">generator</span></h1>
+    <input type="file" id="imageUpload" accept="image/*" multiple>
+    <label for="frameTime">Tempo por frame (ms):</label>
+    <input type="number" id="frameTime" value="500" min="50">
+
+    <label for="fitMode">Modo de ajuste:</label>
+    <select id="fitMode">
+      <option value="contain">Contain (mantém proporção, pode ter borda)</option>
+      <option value="cover">Cover (corta para preencher)</option>
+    </select>
+
+    <label for="bgColor">Cor de fundo (modo contain):</label>
+    <input type="color" id="bgColor" value="#000000">
+
+    <h2><span class="italic">glitch generator</span></h2>
+    <label><input type="checkbox" id="enableGlitch"> Ativar glitch</label>
+    <div id="glitchControls">
+      <label>Deslocamento horizontal: <input type="range" id="glitchOffsetX" min="0" max="50" value="0"></label>
+      <label>Deslocamento vertical: <input type="range" id="glitchOffsetY" min="0" max="50" value="0"></label>
+      <label>RGB Split: <input type="range" id="glitchRGB" min="0" max="50" value="0"></label>
+      <label>Noise: <input type="range" id="glitchNoise" min="0" max="100" value="0"></label>
+      <label>Scanlines: <input type="range" id="glitchScan" min="0" max="100" value="0"></label>
+      <label>Pixelate: <input type="range" id="glitchPixel" min="1" max="20" value="1"></label>
+      <label>Brilho: <input type="range" id="glitchBrightness" min="50" max="150" value="100"></label>
+      <label>Saturação: <input type="range" id="glitchSaturation" min="50" max="150" value="100"></label>
+    </div>
+
+    <h2>Preview</h2>
+    <canvas id="previewCanvas"></canvas>
+
+    <button id="generateVideo">Gerar Vídeo (WebM)</button>
+    <a id="downloadLink" style="display:none;" download="output.webm">Baixar vídeo</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
